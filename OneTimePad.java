@@ -3,18 +3,13 @@ import java.util.*;
 public class OneTimePad {
 	public static String stringEncryption(String text,String key)
 	{
-
 		String cipherText = "";
 		int cipher[] = new int[key.length()];
 		for (int i = 0; i < key.length(); i++) {
 			cipher[i] = text.charAt(i) - 'A'+ key.charAt(i)- 'A';
-		}
-		for (int i = 0; i < key.length(); i++) {
 			if (cipher[i] > 25) {
 				cipher[i] = cipher[i] - 26;
 			}
-		}
-		for (int i = 0; i < key.length(); i++) {
 			int x = cipher[i] + 'A';
 			cipherText += (char)x;
 		}
@@ -26,13 +21,9 @@ public class OneTimePad {
 		int plain[] = new int[key.length()];
 		for (int i = 0; i < key.length(); i++) {
 			plain[i]= s.charAt(i) - 'A'- (key.charAt(i) - 'A');
-		}
-		for (int i = 0; i < key.length(); i++) {
 			if (plain[i] < 0) {
 				plain[i] = plain[i] + 26;
 			}
-		}
-		for (int i = 0; i < key.length(); i++) {
 			int x = plain[i] + 'A';
 			plainText += (char)x;
 		}
@@ -50,4 +41,3 @@ public class OneTimePad {
 		System.out.println("Message - "+ stringDecryption(encryptedText,key.toUpperCase()));
 	}
 }
-
