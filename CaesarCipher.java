@@ -12,7 +12,7 @@ class CaesarCipher {
         char ch4; 
         System.out.print("Enter the value by which each letter of the string is to be shifted : "); 
         shift=sc.nextInt(); 
-        System.out.println("Encrypted"); 
+        System.out.println("Encryption Sccessfully Completed"); 
         for(i=0;i<n;i++) { 
             if(Character.isLetter(ch1[i])) { 
                 ch4=(char)(((int)ch1[i]+shift-97)%26+97); 
