@@ -53,7 +53,6 @@ class MAC {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter plain text: ");
 		String str = sc.nextLine();
-		System.out.println("Plain text: " + str);
 		String encryptedString = stringEncryption(str.toLowerCase());
 		System.out.println("Encrypted message: "+ encryptedString);
 		System.out.println("Decrypted message: "
