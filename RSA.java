@@ -20,13 +20,16 @@ public class RSA {
         return b == 0 ? a : gcd(b, a % b);
     }
     public static long modInverse(long a, long m) {
-        for (long x = 1; x < m; x++) if ((a * x) % m == 1) return x;
+        for (long x = 1; x < m; x++) 
+            if ((a * x) % m == 1) 
+                return x;
         return 1;
-    }
+    } 
     public static long modPow(long base, long exp, long mod) {
         long result = 1;
         while (exp > 0) {
-            if (exp % 2 == 1) result = (result * base) % mod;
+            if (exp % 2 == 1)  
+                result = (result * base) % mod;
             base = (base * base) % mod;
             exp /= 2;
         }
