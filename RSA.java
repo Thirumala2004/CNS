@@ -5,7 +5,8 @@ public class RSA {
         System.out.print("Enter two prime numbers: ");
         long p = scanner.nextLong(), q = scanner.nextLong();
         long n = p * q, phi = (p - 1) * (q - 1), e = 3;
-        while (gcd(e, phi) != 1) e += 2;
+        while (gcd(e, phi) != 1) 
+           e += 2;
         long d = modInverse(e, phi);
         System.out.println("Public Key: (" + e + ", " + n + ")");
         System.out.println("Private Key: (" + d + ", " + n + ")");
